@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maze Adventure</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="startScreen" class="screen">
+
+    <h1>🎮 MAZE ADVENTURE</h1>
+
+    <p>Find the key 🔑 and escape through the exit 🚪</p>
+
+    <p>Collect coins 🪙 and avoid enemies 👾</p>
+
+    <button onclick="startGame()">START GAME</button>
+
+</div>
+
+
+<div id="gameScreen">
+
+    <h1>🎮 Maze Adventure</h1>
+
+    <div class="stats">
+
+        <div>🏆 Score: <span id="score">0</span></div>
+
+        <div>❤️ Lives: <span id="lives">3</span></div>
+
+        <div>⏱️ Time: <span id="timer">60</span></div>
+
+        <div>🗺️ Level: <span id="level">1</span></div>
+
+        <div>🥇 Best: <span id="highScore">0</span></div>
+
+    </div>
+
+
+    <div id="game"></div>
+
+
+    <p id="message">
+        Find the key and reach the exit!
+    </p>
+
+
+    <div class="controls">
+
+        <button onclick="movePlayer(-1, 0)">⬆️</button>
+
+        <div>
+            <button onclick="movePlayer(0, -1)">⬅️</button>
+            <button onclick="movePlayer(1, 0)">⬇️</button>
+            <button onclick="movePlayer(0, 1)">➡️</button>
+        </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button onclick="togglePause()">⏸️ Pause</button>
+
+        <button onclick="restartGame()">🔄 Restart</button>
+
+    </div>
+
+</div>
+
+
+<div id="endScreen" class="screen">
+
+    <h1 id="endTitle">Game Over</h1>
+
+    <p id="finalScore"></p>
+
+    <button onclick="restartGame()">PLAY AGAIN</button>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

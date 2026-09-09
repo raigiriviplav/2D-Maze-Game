@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at top, #263238, #101010);
+
+    color: white;
+
+    padding: 20px;
+}
+
+
+h1 {
+
+    margin-top: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+#gameScreen {
+
+    display: none;
+
+}
+
+
+.screen {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.screen h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.screen p {
+
+    font-size: 18px;
+
+    margin: 8px;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 12px 20px;
+
+    margin: 5px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.15s;
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+.screen button {
+
+    margin-top: 25px;
+
+    padding: 15px 35px;
+
+    font-size: 20px;
+}
+
+
+.stats {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin: 20px auto;
+
+    max-width: 700px;
+}
+
+
+.stats div {
+
+    background: #252525;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+
+    padding: 10px 14px;
+}
+
+
+#game {
+
+    display: grid;
+
+    grid-template-columns: repeat(10, 40px);
+
+    grid-template-rows: repeat(10, 40px);
+
+    width: 400px;
+
+    height: 400px;
+
+    margin: 20px auto;
+
+    border: 4px solid #777;
+
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+
+.cell {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid #333;
+
+    background: #d9d9d9;
+
+    transition: background 0.1s;
+}
+
+
+.wall {
+
+    background: #303030;
+
+}
+
+
+.player {
+
+    background: #2196f3;
+
+    border-radius: 50%;
+
+    transform: scale(0.8);
+
+}
+
+
+.key {
+
+    background: gold;
+
+    border-radius: 50%;
+
+    transform: scale(0.7);
+}
+
+
+.exit {
+
+    background: #20c66b;
+
+}
+
+
+.coin {
+
+    background: orange;
+
+    border-radius: 50%;
+
+    transform: scale(0.6);
+}
+
+
+.enemy {
+
+    background: #e53935;
+
+    border-radius: 30%;
+
+    transform: scale(0.75);
+}
+
+
+#message {
+
+    min-height: 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+.controls {
+
+    display: none;
+
+    margin: 10px;
+}
+
+
+.controls button {
+
+    width: 55px;
+
+    height: 45px;
+
+    padding: 5px;
+}
+
+
+.buttons {
+
+    margin-top: 10px;
+}
+
+
+#endScreen {
+
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    #game {
+
+        transform: scale(0.85);
+
+        margin: 0 auto;
+
+    }
+
+    .controls {
+
+        display: block;
+
+    }
+
+    .screen h1 {
+
+        font-size: 32px;
+
+    }
+
+}
