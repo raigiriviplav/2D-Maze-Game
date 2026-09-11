@@ -85,10 +85,5 @@ The game is deployed using **GitHub Pages** and can be played online:
 
 GitHub: [@raigiriviplav](https://github.com/raigiriviplav)
 
-## 📄 License
-
-This project was created for learning and educational purposes.
-
-```
 
 
